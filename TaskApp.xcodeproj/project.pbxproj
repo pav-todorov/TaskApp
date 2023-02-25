@@ -101,12 +101,10 @@
 		E99E0BA229A9FC9700F69B83 /* TaskApp */ = {
 			isa = PBXGroup;
 			children = (
-				E99E0BA329A9FC9700F69B83 /* AppDelegate.swift */,
-				E99E0BA529A9FC9700F69B83 /* SceneDelegate.swift */,
-				E99E0BA729A9FC9700F69B83 /* ViewController.swift */,
-				E99E0BA929A9FC9700F69B83 /* Main.storyboard */,
+				E99E0BD629A9FF5B00F69B83 /* App Control */,
+				E99E0BD829A9FF7C00F69B83 /* Scenes */,
+				E99E0BD729A9FF6C00F69B83 /* Views */,
 				E99E0BAF29A9FC9F00F69B83 /* Assets.xcassets */,
-				E99E0BB129A9FC9F00F69B83 /* LaunchScreen.storyboard */,
 				E99E0BB429A9FC9F00F69B83 /* Info.plist */,
 				E99E0BAC29A9FC9700F69B83 /* TaskApp.xcdatamodeld */,
 			);
@@ -128,6 +126,48 @@
 				E99E0BC929A9FCA000F69B83 /* TaskAppUITestsLaunchTests.swift */,
 			);
 			path = TaskAppUITests;
+			sourceTree = "<group>";
+		};
+		E99E0BD629A9FF5B00F69B83 /* App Control */ = {
+			isa = PBXGroup;
+			children = (
+				E99E0BA329A9FC9700F69B83 /* AppDelegate.swift */,
+				E99E0BA529A9FC9700F69B83 /* SceneDelegate.swift */,
+			);
+			path = "App Control";
+			sourceTree = "<group>";
+		};
+		E99E0BD729A9FF6C00F69B83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E99E0BD829A9FF7C00F69B83 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E99E0BD929A9FFE800F69B83 /* Launch Screen */,
+				E99E0BDA29A9FFF900F69B83 /* Login Screen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E99E0BD929A9FFE800F69B83 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E99E0BB129A9FC9F00F69B83 /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		E99E0BDA29A9FFF900F69B83 /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E99E0BA729A9FC9700F69B83 /* ViewController.swift */,
+				E99E0BA929A9FC9700F69B83 /* Main.storyboard */,
+			);
+			path = "Login Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
