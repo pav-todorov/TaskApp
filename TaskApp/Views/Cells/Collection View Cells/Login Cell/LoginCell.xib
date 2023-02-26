@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans.ttf">
+            <string>OpenSans-Regular</string>
+            <string>OpenSansRoman-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="LoginCell" reuseIdentifier="LoginCell" id="gTV-IL-0wX" customClass="LoginCell" customModule="TaskApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="931"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="474" height="931"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hS-4i-RX4">
+                        <rect key="frame" x="0.0" y="32" width="474" height="867"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="jk5-my-Jgr" userLabel="Main Stack">
+                                <rect key="frame" x="0.0" y="0.0" width="474" height="660.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2JD-pl-jju" userLabel="Welcome Stack">
+                                        <rect key="frame" x="16" y="44" width="442" height="89"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ1-F7-20z">
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="33"/>
+                                                <fontDescription key="fontDescription" name="OpenSansRoman-Bold" family="Open Sans" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in so you can view all of your bevvyed whisky bottles and explore much more." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j0-44-jof">
+                                                <rect key="frame" x="0.0" y="45" width="442" height="44"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-xu-wh4" userLabel="Credentials Stack">
+                                        <rect key="frame" x="16" y="165" width="442" height="203"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Em0-Mq-94S" userLabel="Credentials Table View">
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="172"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="172" id="Vgh-Rl-h7p"/>
+                                                </constraints>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-c5-PXa" userLabel="Reset Password Button">
+                                                <rect key="frame" x="0.0" y="172" width="442" height="31"/>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapResetPassword:" destination="gTV-IL-0wX" eventType="touchUpInside" id="T8K-BC-hzU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Qk-9O-0cw" customClass="PrimaryButton" customModule="TaskApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="400" width="442" height="31"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                        <connections>
+                                            <action selector="didTapLoginButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OfH-vS-wAX"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OTM-hn-hZC" userLabel="External Log In Stack">
+                                        <rect key="frame" x="16" y="463" width="442" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or continue with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsV-ez-Xzj" userLabel="Extenal Section Tittle">
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.5411764979" green="0.5411764979" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-me-Aps" customClass="SecondaryButton" customModule="TaskApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28.5" width="442" height="28.5"/>
+                                                <color key="backgroundColor" red="0.1999999881" green="0.1999999881" blue="0.1999999881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Log In">
+                                                    <fontDescription key="titleFontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="13"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-xp-QHy" userLabel="Social Media Log In Stack">
+                                                <rect key="frame" x="0.0" y="69" width="442" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2j-uj-KdL" customClass="SecondaryButton" customModule="TaskApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="214" height="31"/>
+                                                        <color key="backgroundColor" red="0.1999999881" green="0.1999999881" blue="0.1999999881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-oV-1jN" customClass="SecondaryButton" customModule="TaskApp" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="0.0" width="214" height="31"/>
+                                                        <color key="backgroundColor" red="0.1999999881" green="0.1999999881" blue="0.1999999881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntt-2z-Eyg" userLabel="Guest Button">
+                                        <rect key="frame" x="16" y="595" width="442" height="33.5"/>
+                                        <color key="tintColor" red="0.1999999881" green="0.1999999881" blue="0.1999999881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Continue as guest">
+                                            <fontDescription key="titleFontDescription" name="OpenSansRoman-Bold" family="Open Sans" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapGuestButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="D5t-M9-OBd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="32" left="16" bottom="32" right="16"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jk5-my-Jgr" firstAttribute="width" secondItem="DU3-uk-mzp" secondAttribute="width" id="Ar3-wo-wh3"/>
+                            <constraint firstItem="k1q-dP-Hw8" firstAttribute="leading" secondItem="jk5-my-Jgr" secondAttribute="leading" id="EDB-oC-kfF"/>
+                            <constraint firstItem="k1q-dP-Hw8" firstAttribute="top" secondItem="jk5-my-Jgr" secondAttribute="top" id="eiM-zl-tte"/>
+                            <constraint firstItem="jk5-my-Jgr" firstAttribute="bottom" secondItem="k1q-dP-Hw8" secondAttribute="bottom" id="g8g-xU-d7z"/>
+                            <constraint firstItem="jk5-my-Jgr" firstAttribute="trailing" secondItem="k1q-dP-Hw8" secondAttribute="trailing" id="h7v-Uj-9Wq"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="k1q-dP-Hw8"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="DU3-uk-mzp"/>
+                    </scrollView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="0hS-4i-RX4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QEo-iO-hZK"/>
+                <constraint firstItem="0hS-4i-RX4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="32" id="QRX-Ck-rLU"/>
+                <constraint firstAttribute="trailing" secondItem="0hS-4i-RX4" secondAttribute="trailing" id="iOQ-Fn-9cn"/>
+                <constraint firstAttribute="bottom" secondItem="0hS-4i-RX4" secondAttribute="bottom" constant="32" id="xGp-uc-uBj"/>
+            </constraints>
+            <size key="customSize" width="474" height="931"/>
+            <connections>
+                <outlet property="appleButton" destination="G3y-me-Aps" id="L5Y-am-1D3"/>
+                <outlet property="credentialsTableViewHeight" destination="Vgh-Rl-h7p" id="L0z-VP-hy9"/>
+                <outlet property="facebookButton" destination="2qK-oV-1jN" id="3Gd-Qw-TGw"/>
+                <outlet property="googleButton" destination="d2j-uj-KdL" id="2vM-uW-Zgn"/>
+                <outlet property="loginButton" destination="3Qk-9O-0cw" id="oNk-GY-Bgq"/>
+                <outlet property="mainStack" destination="jk5-my-Jgr" id="NEI-ha-WHS"/>
+                <outlet property="userCredentialsTableView" destination="Em0-Mq-94S" id="j3K-sO-kfZ"/>
+            </connections>
+            <point key="canvasLocation" x="17.39130434782609" y="-159.70982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
