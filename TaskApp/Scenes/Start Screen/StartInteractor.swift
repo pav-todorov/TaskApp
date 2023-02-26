@@ -5,15 +5,14 @@
 //  Created by Pavel on 26.02.23.
 //
 
-import Foundation
 import UIKit
+import AuthenticationServices
 
 // MARK: Start Interactor
 struct StartInteractor: StartInteractive {
     
-    
     // MARK: Start Interactive
-    func userDidTapLoginButton(credentials: (email: String, password: String),
+    func login(with credentials: (email: String, password: String),
                                presenter: StartPresentable) {
         
         presenter.showLoadingIndicator()
@@ -38,5 +37,24 @@ struct StartInteractor: StartInteractive {
                 })
             }
         }
+    }
+    
+    func appleLogin(delegate: StartViewable) {
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.email, .fullName]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = delegate
+        controller.presentationContextProvider = delegate
+        controller.performRequests()
+    }
+    
+    func googleLogin() {
+        
+    }
+    
+    func facebookLogin() {
+        
     }
 }

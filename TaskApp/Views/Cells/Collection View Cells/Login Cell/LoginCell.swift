@@ -11,6 +11,9 @@ protocol LoginCellProtocol: AnyObject {
     func userDidTapLoginButton(credentials: (email: String, password: String))
     func userDidTapResetButton()
     func userDidTapGuestButton()
+    func userDidTapAppleButton()
+    func userDidTapGoogleButton()
+    func userDidTapFacebookButton()
 }
 
 class LoginCell: UICollectionViewCell {
@@ -55,6 +58,18 @@ class LoginCell: UICollectionViewCell {
     
     @IBAction func didTapGuestButton(_ sender: Any) {
         delegate?.userDidTapGuestButton()
+    }
+    
+    @IBAction func didTapAppleButton(_ sender: Any) {
+        delegate?.userDidTapAppleButton()
+    }
+    
+    @IBAction func didTapGoogleButton(_ sender: Any) {
+        delegate?.userDidTapGoogleButton()
+    }
+    
+    @IBAction func didTapFacebookButton(_ sender: Any) {
+        delegate?.userDidTapFacebookButton()
     }
     
     func configureUserCredentialsTableView() {

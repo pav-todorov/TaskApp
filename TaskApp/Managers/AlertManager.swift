@@ -37,6 +37,8 @@ enum AlertType {
     case wrongCredentials
     case serverError
     case systemError(_ error: Error)
+    case appleLoginWelcome(givenName: String, email: String)
+    case appleLoginMissingEmail
     
     var title: String {
         switch self {
@@ -46,6 +48,8 @@ enum AlertType {
         case .wrongCredentials: return "Login Failed"
         case .serverError: return "Oops"
         case .systemError(_): return "Something Went Wrong"
+        case .appleLoginWelcome(let givenName, _): return "Welcome, \(givenName)"
+        case .appleLoginMissingEmail: return "Missing Email Address"
         }
     }
     
@@ -58,6 +62,8 @@ enum AlertType {
         case .serverError:
             return "The server encountered an internal error and was unable to complete your request.\nPlease, try again later."
         case .systemError(let error): return error.localizedDescription
+        case .appleLoginWelcome(_, let email): return "You've been successfully logged in with your AppleID: \(email)."
+        case .appleLoginMissingEmail: return "A valid email address is required to log in."
         }
     }
 }

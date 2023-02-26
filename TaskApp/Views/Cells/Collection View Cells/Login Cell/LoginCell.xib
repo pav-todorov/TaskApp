@@ -98,6 +98,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                                     <fontDescription key="titleFontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="13"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapAppleButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="evp-Nk-R0O"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-xp-QHy" userLabel="Social Media Log In Stack">
                                                 <rect key="frame" x="0.0" y="69" width="442" height="31"/>
@@ -108,6 +111,9 @@
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                                        <connections>
+                                                            <action selector="didTapGoogleButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eVz-BA-ALD"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qK-oV-1jN" customClass="SecondaryButton" customModule="TaskApp" customModuleProvider="target">
                                                         <rect key="frame" x="228" y="0.0" width="214" height="31"/>
@@ -115,6 +121,9 @@
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                                        <connections>
+                                                            <action selector="didTapFacebookButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Z1E-SD-snb"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

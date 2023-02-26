@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 class StartScreen: UIViewController,
                    UICollectionViewDelegate,
@@ -240,6 +241,18 @@ extension StartScreen: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: Login Cell Protocol
 extension StartScreen: LoginCellProtocol {
+    func userDidTapAppleButton() {
+        presenter.userDidTapAppleButton()
+    }
+    
+    func userDidTapGoogleButton() {
+        
+    }
+    
+    func userDidTapFacebookButton() {
+        
+    }
+    
     func userDidTapLoginButton(credentials: (email: String, password: String)) {
         presenter.userDidTapLoginButton(credentials: credentials)
     }
@@ -250,5 +263,20 @@ extension StartScreen: LoginCellProtocol {
     
     func userDidTapGuestButton() {
         presenter.userDidTapGuestButton()
+    }
+}
+
+// MARK: Authentication Services
+extension StartScreen: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return view.window!
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        presenter.appleLoginSuccess(with: authorization)
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        presenter.appleLoginFailed(with: error)
     }
 }

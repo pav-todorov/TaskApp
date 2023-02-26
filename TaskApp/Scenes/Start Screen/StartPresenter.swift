@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AuthenticationServices
 
 // MARK: - Start Presenter
 final class StartPresenter<View, Router, Interactor>: StartPresentable
@@ -33,7 +34,7 @@ Interactor: StartInteractive
     func viewDidLoad() {}
     
     func userDidTapLoginButton(credentials: (email: String, password: String)) {
-        interactor.userDidTapLoginButton(credentials: credentials, presenter: self)
+        interactor.login(with: credentials, presenter: self)
     }
     
     func showLoadingIndicator() {
@@ -54,5 +55,36 @@ Interactor: StartInteractive
     
     func userDidTapResetButton() {
         view.populateCredentials()
+    }
+    
+    func userDidTapAppleButton() {
+        interactor.appleLogin(delegate: view)
+    }
+    
+    func appleLoginSuccess(with authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let credentials as ASAuthorizationAppleIDCredential:
+            guard let email = credentials.email else {
+                view.showAlertMessage(with: .appleLoginMissingEmail)
+                break
+            }
+            let firstName = credentials.fullName?.givenName ?? "user"
+            
+            view.showAlertMessage(with: .appleLoginWelcome(givenName: firstName,
+                                                           email: email))
+        default: break
+        }
+    }
+    
+    func appleLoginFailed(with error: Error) {
+        view.showAlertMessage(with: .systemError(error))
+    }
+    
+    func userDidTapGoogleButton() {
+        
+    }
+    
+    func userDidTapFacebookButton() {
+        
     }
 }
