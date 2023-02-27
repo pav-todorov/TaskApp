@@ -203,6 +203,7 @@
 		E90424DC29AAA57600C0D0A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E960015029ACBE2A008844F2 /* Entitlements */,
 				E90424DD29AAA58000C0D0A8 /* Fonts */,
 				E90424DE29AAA58B00C0D0A8 /* Images */,
 				E960014B29ACA8EB008844F2 /* Localizable.strings */,
@@ -304,6 +305,14 @@
 			path = "Alert Manager";
 			sourceTree = "<group>";
 		};
+		E960015029ACBE2A008844F2 /* Entitlements */ = {
+			isa = PBXGroup;
+			children = (
+				E90424E129AB67A200C0D0A8 /* TaskApp.entitlements */,
+			);
+			path = Entitlements;
+			sourceTree = "<group>";
+		};
 		E99E0B9729A9FC9700F69B83 = {
 			isa = PBXGroup;
 			children = (
@@ -329,7 +338,6 @@
 			children = (
 				E9BE0ECB29AA256600F415AD /* Network Services */,
 				E90424E629AB777700C0D0A8 /* Managers */,
-				E90424E129AB67A200C0D0A8 /* TaskApp.entitlements */,
 				E99E0BD629A9FF5B00F69B83 /* App Control */,
 				E99E0BD829A9FF7C00F69B83 /* Scenes */,
 				E99E0BD729A9FF6C00F69B83 /* Views */,
@@ -836,7 +844,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TaskApp/TaskApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TaskApp/Resources/Entitlements/TaskApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -866,7 +874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TaskApp/TaskApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TaskApp/Resources/Entitlements/TaskApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

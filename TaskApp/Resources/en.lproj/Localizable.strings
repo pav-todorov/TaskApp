@@ -26,9 +26,9 @@
 
 // MARK: - Alerts - Messages
 "alerts_messages_internal_login_success" = "You were successfully logged in!";
-"alerts_messages_login_as_guest" = "Your email or password is incorrect.\nPlease, try again.";
+"alerts_messages_wrong_credentials" = "Your email or password is incorrect.\nPlease, try again.";
 "alerts_messages_loading" = "Please, wait...";
-"alerts_messages_wrong_credentials" = "You were successfully logged in as a guest.";
+"alerts_messages_login_as_guest" = "You were successfully logged in as a guest.";
 "alerts_messages_server_error" = "The server encountered an internal error and was unable to complete your request.\nPlease, try again later.";
 "alerts_messages_apple_login_welcome" = "You've been successfully logged in with your AppleID: %@.";
 "alerts_messages_apple_login_missing_email" = "A valid email address is required to log in.";
