@@ -21,7 +21,9 @@ class StartScreen: UIViewController,
     
     // MARK: Variables
     var presenter: (any StartPresentable)!
-    let menuItems = ["LOG IN", "SIGN UP"]
+    private typealias LocStrings = LocalizedStrings.Scenes.StartScreen
+    let menuItems = [LocStrings.start_screen_menu_item_login,
+                     LocStrings.start_screen_menu_item_signup]
     
     // MARK: Outlets
     @IBOutlet weak var navigationCollectionView: UICollectionView!

@@ -1,0 +1,65 @@
+/*
+  Localizable.strings
+  TaskApp
+
+  Created by Pavel on 27.02.23.
+  
+*/
+
+// MARK: - Common
+"common_ok" = "OK";
+
+// MARK: - Alerts - Titles
+"alerts_titles_internal_login_success" = "Successful Log in";
+"alerts_titles_login_as_guest" = "Log in as Guest";
+"alerts_titles_loading" = "";
+"alerts_titles_wrong_credentials" = "Login Failed";
+"alerts_titles_server_error" = "Oops";
+"alerts_titles_system_error" = "Something Went Wrong";
+"alerts_titles_apple_login_welcome" = "Welcome, %@!";
+"alerts_titles_apple_login_missing_email" = "Missing Email Address";
+"alerts_titles_facebook_login_welcome" = "Welcome, %@!";
+"alerts_titles_facebook_login_failed" = "Logging with Facebook failed";
+"alerts_titles_google_login_welcome" = "Welcome, %@!";
+"alerts_titles_google_login_failed" = "Logging with Google failed";
+
+
+// MARK: - Alerts - Messages
+"alerts_messages_internal_login_success" = "You were successfully logged in!";
+"alerts_messages_login_as_guest" = "Your email or password is incorrect.\nPlease, try again.";
+"alerts_messages_loading" = "Please, wait...";
+"alerts_messages_wrong_credentials" = "You were successfully logged in as a guest.";
+"alerts_messages_server_error" = "The server encountered an internal error and was unable to complete your request.\nPlease, try again later.";
+"alerts_messages_apple_login_welcome" = "You've been successfully logged in with your AppleID: %@.";
+"alerts_messages_apple_login_missing_email" = "A valid email address is required to log in.";
+"alerts_messages_facebook_login_welcome" = "You've been successfully logged in with your Facebook account: %@.";
+"alerts_messages_google_login_welcome" = "You've been successfully logged in with your Google account: %@.";
+
+// MARK: - Login Cell
+"login_cell_buttons_login" = "Log in";
+"login_cell_buttons_reset" = "Forgot Password?";
+"login_cell_buttons_apple" = "Apple";
+"login_cell_buttons_google" = "Google";
+"login_cell_buttons_facebook" = "Facebook";
+"login_cell_buttons_guest" = "Continue as guest";
+
+"login_cell_title" = "Welcome back";
+"login_cell_subtitle" = "Log in so you can view all of your bevvyed whisky bottles and explore much more.";
+"login_cell_external_login_section_title" = "or continue with";
+
+// MARK: - Signup Cell
+"signup_cell_title" = "Signup Screen";
+
+// MARK: - Start Screen
+"start_screen_menu_item_login" = "LOG IN";
+"start_screen_menu_item_signup" = "SIGN UP";
+
+// MARK:  - User Credentials Cells - User Cell
+"user_cell_title" = "Email";
+"user_cell_placeholder" = "Email";
+"user_cell_assistive_text" = "Activated";
+
+// MARK:  - User Credentials Cells - Password Cell
+"password_cell_title" = "Password";
+"password_cell_placeholder" = "Password";
+"password_cell_assistive_text" = "Focused";

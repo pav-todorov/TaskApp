@@ -31,6 +31,10 @@
 		E960013929AC9925008844F2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E960013829AC9925008844F2 /* GoogleSignIn */; };
 		E960013B29AC9925008844F2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E960013A29AC9925008844F2 /* GoogleSignInSwift */; };
 		E960013E29AC99D1008844F2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E960013D29AC99D1008844F2 /* FirebaseAuth */; };
+		E960014229ACA3AC008844F2 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960014129ACA3AC008844F2 /* LocalizedStrings.swift */; };
+		E960014429ACA46B008844F2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960014329ACA46B008844F2 /* String.swift */; };
+		E960014929ACA8EB008844F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E960014B29ACA8EB008844F2 /* Localizable.strings */; };
+		E960014F29ACAFF4008844F2 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E960014E29ACAFF4008844F2 /* AlertType.swift */; };
 		E99E0BA429A9FC9700F69B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E0BA329A9FC9700F69B83 /* AppDelegate.swift */; };
 		E99E0BA629A9FC9700F69B83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E0BA529A9FC9700F69B83 /* SceneDelegate.swift */; };
 		E99E0BA829A9FC9700F69B83 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E0BA729A9FC9700F69B83 /* StartScreen.swift */; };
@@ -89,6 +93,13 @@
 		E90548BA29ABEB6B008AF8DC /* StartInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInterface.swift; sourceTree = "<group>"; };
 		E90548BC29ABEBB7008AF8DC /* StartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
 		E90548BF29ABF3F8008AF8DC /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		E960014129ACA3AC008844F2 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		E960014329ACA46B008844F2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E960014529ACA861008844F2 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E960014629ACA864008844F2 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/StartScreen.strings; sourceTree = "<group>"; };
+		E960014A29ACA8EB008844F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E960014C29ACA8F6008844F2 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E960014E29ACAFF4008844F2 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		E99E0BA029A9FC9700F69B83 /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99E0BA329A9FC9700F69B83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99E0BA529A9FC9700F69B83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,19 +157,11 @@
 		E90424AF29AA4C4100C0D0A8 /* User Credentials */ = {
 			isa = PBXGroup;
 			children = (
-				E90424B829AA4CE400C0D0A8 /* User Credentials Cell */,
-			);
-			path = "User Credentials";
-			sourceTree = "<group>";
-		};
-		E90424B829AA4CE400C0D0A8 /* User Credentials Cell */ = {
-			isa = PBXGroup;
-			children = (
-				E90424C729AA4D7700C0D0A8 /* Base Credentials Cell */,
+				E90424C729AA4D7700C0D0A8 /* Base Credentials */,
 				E90424BD29AA4D3900C0D0A8 /* User */,
 				E90424BE29AA4D4800C0D0A8 /* Password */,
 			);
-			path = "User Credentials Cell";
+			path = "User Credentials";
 			sourceTree = "<group>";
 		};
 		E90424BD29AA4D3900C0D0A8 /* User */ = {
@@ -179,12 +182,12 @@
 			path = Password;
 			sourceTree = "<group>";
 		};
-		E90424C729AA4D7700C0D0A8 /* Base Credentials Cell */ = {
+		E90424C729AA4D7700C0D0A8 /* Base Credentials */ = {
 			isa = PBXGroup;
 			children = (
 				E90424C329AA4D7200C0D0A8 /* BaseCredentialsTableViewCell.swift */,
 			);
-			path = "Base Credentials Cell";
+			path = "Base Credentials";
 			sourceTree = "<group>";
 		};
 		E90424D529AA97CF00C0D0A8 /* Buttons */ = {
@@ -197,13 +200,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		E90424DC29AAA57600C0D0A8 /* Assets */ = {
+		E90424DC29AAA57600C0D0A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E90424DD29AAA58000C0D0A8 /* Fonts */,
 				E90424DE29AAA58B00C0D0A8 /* Images */,
+				E960014B29ACA8EB008844F2 /* Localizable.strings */,
 			);
-			path = Assets;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E90424DD29AAA58000C0D0A8 /* Fonts */ = {
@@ -225,7 +229,7 @@
 		E90424E629AB777700C0D0A8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				E90424E829AB778E00C0D0A8 /* AlertManager.swift */,
+				E960014D29ACAFE1008844F2 /* Alert Manager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -275,6 +279,31 @@
 			path = Laucher;
 			sourceTree = "<group>";
 		};
+		E960013F29ACA396008844F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E960014029ACA3A0008844F2 /* Localization */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E960014029ACA3A0008844F2 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E960014129ACA3AC008844F2 /* LocalizedStrings.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		E960014D29ACAFE1008844F2 /* Alert Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E90424E829AB778E00C0D0A8 /* AlertManager.swift */,
+				E960014E29ACAFF4008844F2 /* AlertType.swift */,
+			);
+			path = "Alert Manager";
+			sourceTree = "<group>";
+		};
 		E99E0B9729A9FC9700F69B83 = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +334,8 @@
 				E99E0BD829A9FF7C00F69B83 /* Scenes */,
 				E99E0BD729A9FF6C00F69B83 /* Views */,
 				E9BE0EC429AA148000F415AD /* Extensions */,
-				E90424DC29AAA57600C0D0A8 /* Assets */,
+				E960013F29ACA396008844F2 /* Helpers */,
+				E90424DC29AAA57600C0D0A8 /* Resources */,
 				E99E0BB429A9FC9F00F69B83 /* Info.plist */,
 				E99E0BAC29A9FC9700F69B83 /* TaskApp.xcdatamodeld */,
 			);
@@ -418,6 +448,7 @@
 		E9BE0EC829AA21C900F415AD /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				E960014329ACA46B008844F2 /* String.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -532,6 +563,7 @@
 			knownRegions = (
 				en,
 				Base,
+				bg,
 			);
 			mainGroup = E99E0B9729A9FC9700F69B83;
 			packageReferences = (
@@ -557,6 +589,7 @@
 			files = (
 				E9BE0EC329AA100900F415AD /* MenuItem.xib in Resources */,
 				E90424D229AA715E00C0D0A8 /* PasswordTableViewCell.xib in Resources */,
+				E960014929ACA8EB008844F2 /* Localizable.strings in Resources */,
 				E99E0BB329A9FC9F00F69B83 /* LaunchScreen.storyboard in Resources */,
 				E90424C629AA4D7200C0D0A8 /* UserTableViewCell.xib in Resources */,
 				E90424E029AAA5AF00C0D0A8 /* OpenSans.ttf in Resources */,
@@ -595,6 +628,7 @@
 				E90548B229ABC735008AF8DC /* SignupCell.swift in Sources */,
 				E90424C129AA4D5600C0D0A8 /* PasswordTableViewCell.swift in Sources */,
 				E90424BB29AA4D2F00C0D0A8 /* UserTableViewCell.swift in Sources */,
+				E960014229ACA3AC008844F2 /* LocalizedStrings.swift in Sources */,
 				E90548C129ABF3F8008AF8DC /* Launcher.swift in Sources */,
 				E99E0BAE29A9FC9700F69B83 /* TaskApp.xcdatamodeld in Sources */,
 				E90424DB29AA9CB000C0D0A8 /* SecondaryButton.swift in Sources */,
@@ -602,6 +636,7 @@
 				E9BE0EC629AA148F00F415AD /* UIColor.swift in Sources */,
 				E99E0BA829A9FC9700F69B83 /* StartScreen.swift in Sources */,
 				E90424D429AA733800C0D0A8 /* UIViewController.swift in Sources */,
+				E960014429ACA46B008844F2 /* String.swift in Sources */,
 				E9BE0EC129AA0F9300F415AD /* MenuItem.swift in Sources */,
 				E99E0BA429A9FC9700F69B83 /* AppDelegate.swift in Sources */,
 				E99E0BA629A9FC9700F69B83 /* SceneDelegate.swift in Sources */,
@@ -610,6 +645,7 @@
 				E90548B929ABEB41008AF8DC /* StartRouter.swift in Sources */,
 				E90424D929AA9C0D00C0D0A8 /* PrimaryButton.swift in Sources */,
 				E90548BD29ABEBB7008AF8DC /* StartInteractor.swift in Sources */,
+				E960014F29ACAFF4008844F2 /* AlertType.swift in Sources */,
 				E90424D729AA97F900C0D0A8 /* BaseChipButton.swift in Sources */,
 				E90548B529ABEA2E008AF8DC /* StartFactory.swift in Sources */,
 				E9BE0ECA29AA21D800F415AD /* NSLayoutConstraint.swift in Sources */,
@@ -649,10 +685,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E960014B29ACA8EB008844F2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E960014A29ACA8EB008844F2 /* en */,
+				E960014C29ACA8F6008844F2 /* bg */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E99E0BA929A9FC9700F69B83 /* StartScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E99E0BAA29A9FC9700F69B83 /* Base */,
+				E960014629ACA864008844F2 /* bg */,
 			);
 			name = StartScreen.storyboard;
 			sourceTree = "<group>";
@@ -661,6 +707,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E99E0BB229A9FC9F00F69B83 /* Base */,
+				E960014529ACA861008844F2 /* bg */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -672,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -732,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -792,6 +841,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Task App";
 				INFOPLIST_KEY_NSMainNibFile = StartScreen;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = StartScreen;
@@ -821,6 +871,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Task App";
 				INFOPLIST_KEY_NSMainNibFile = StartScreen;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = StartScreen;

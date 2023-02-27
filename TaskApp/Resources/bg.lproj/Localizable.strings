@@ -1,0 +1,65 @@
+/*
+  Localizable.strings
+  TaskApp
+
+  Created by Pavel on 27.02.23.
+  
+*/
+
+// MARK: - Common
+"common_ok" = "Добре";
+
+// MARK: - Alerts - Titles
+"alerts_titles_internal_login_success" = "Успешно влизане";
+"alerts_titles_login_as_guest" = "Вписване като гост";
+"alerts_titles_loading" = "";
+"alerts_titles_wrong_credentials" = "Неуспешно вписване";
+"alerts_titles_server_error" = "Опа";
+"alerts_titles_system_error" = "Нещо се обърка";
+"alerts_titles_apple_login_welcome" = "Добре дошли, %@!";
+"alerts_titles_apple_login_missing_email" = "Липсващ имейл";
+"alerts_titles_facebook_login_welcome" = "Добре дошли, %@!";
+"alerts_titles_facebook_login_failed" = "Неуспешно вписване с Facebook";
+"alerts_titles_google_login_welcome" = "Добре дошли, %@!";
+"alerts_titles_google_login_failed" = "Неуспешно вписване с Google";
+
+
+// MARK: - Alerts - Messages
+"alerts_messages_internal_login_success" = "Вие успешно влязохте.";
+"alerts_messages_login_as_guest" = "Успешно влизане като гост.";
+"alerts_messages_loading" = "Моля, изчакайте...";
+"alerts_messages_wrong_credentials" = "Грешен имейл или парарола.\nМоля, опитайте отново.";
+"alerts_messages_server_error" = "Заявката Ви не беше изпълнена поради вътрешна грешка на сървъра.\nМоля, опитайте по-късно.";
+"alerts_messages_apple_login_welcome" = "Успешно влизане с Вашето AppleID: %@.";
+"alerts_messages_apple_login_missing_email" = "Нъжен е валиден имейл адрес, за да се впишете.";
+"alerts_messages_facebook_login_welcome" = "Успешно влизане с Вашият Facebook акаунт: %@.";
+"alerts_messages_google_login_welcome" = "Успешно влизане с Вашият Google акаунт: %@.";
+
+// MARK: - Login Cell
+"login_cell_buttons_login" = "Влизане";
+"login_cell_buttons_reset" = "Забравена Парола?";
+"login_cell_buttons_apple" = "Apple";
+"login_cell_buttons_google" = "Google";
+"login_cell_buttons_facebook" = "Facebook";
+"login_cell_buttons_guest" = "Продължете като гост";
+
+"login_cell_title" = "Добре дошли";
+"login_cell_subtitle" = "Влезте, за да видите всички сканирани с bevvy ботилки с уиски и още много.";
+"login_cell_external_login_section_title" = "или продължете с";
+
+// MARK: - Signup Cell
+"signup_cell_title" = "Екран за Регистрация";
+
+// MARK: - Start Screen
+"start_screen_menu_item_login" = "ВПИСВАНЕ";
+"start_screen_menu_item_signup" = "РЕГИСТРАЦИЯ";
+
+// MARK:  - User Credentials Cells - User Cell
+"user_cell_title" = "Имейл";
+"user_cell_placeholder" = "Имейл";
+"user_cell_assistive_text" = "Активиран";
+
+// MARK:  - User Credentials Cells - Password Cell
+"password_cell_title" = "Парола";
+"password_cell_placeholder" = "Парола";
+"password_cell_assistive_text" = "Фокусиран";

@@ -21,7 +21,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="341" height="197"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signup Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkG-Bb-RWo">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signup Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkG-Bb-RWo">
                         <rect key="frame" x="0.0" y="0.0" width="341" height="197"/>
                         <fontDescription key="fontDescription" name="OpenSansRoman-Bold" family="Open Sans" pointSize="36"/>
                         <nil key="textColor"/>
@@ -37,6 +37,9 @@
                 <constraint firstItem="XkG-Bb-RWo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pA1-du-xkU"/>
             </constraints>
             <size key="customSize" width="341" height="197"/>
+            <connections>
+                <outlet property="titleLabel" destination="XkG-Bb-RWo" id="zdb-xZ-QQq"/>
+            </connections>
             <point key="canvasLocation" x="92.028985507246389" y="163.05803571428569"/>
         </collectionViewCell>
     </objects>

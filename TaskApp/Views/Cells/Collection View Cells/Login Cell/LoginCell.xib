@@ -167,18 +167,23 @@
             <connections>
                 <outlet property="appleButton" destination="G3y-me-Aps" id="L5Y-am-1D3"/>
                 <outlet property="credentialsTableViewHeight" destination="Vgh-Rl-h7p" id="L0z-VP-hy9"/>
+                <outlet property="externalLoginSectionTitle" destination="tsV-ez-Xzj" id="imM-Pb-GLn"/>
                 <outlet property="facebookButton" destination="2qK-oV-1jN" id="3Gd-Qw-TGw"/>
                 <outlet property="googleButton" destination="d2j-uj-KdL" id="2vM-uW-Zgn"/>
+                <outlet property="guestButton" destination="ntt-2z-Eyg" id="A3r-mA-3dY"/>
                 <outlet property="loginButton" destination="3Qk-9O-0cw" id="oNk-GY-Bgq"/>
                 <outlet property="mainStack" destination="jk5-my-Jgr" id="NEI-ha-WHS"/>
+                <outlet property="resetPasswordButton" destination="3qy-c5-PXa" id="pxB-Lr-l1T"/>
                 <outlet property="userCredentialsTableView" destination="Em0-Mq-94S" id="j3K-sO-kfZ"/>
+                <outlet property="welcomeSubtitle" destination="9j0-44-jof" id="3iU-e2-IT9"/>
+                <outlet property="welcomeTitle" destination="nQ1-F7-20z" id="tHS-y7-fPr"/>
             </connections>
             <point key="canvasLocation" x="17.39130434782609" y="-159.70982142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

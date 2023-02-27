@@ -20,14 +20,20 @@ class LoginCell: UICollectionViewCell {
     // MARK: Variables
     static let identifier = "LoginCell"
     weak var delegate: LoginCellProtocol?
+    private typealias LocStrings = LocalizedStrings.Views.LoginCell
     
     // MARK: Outlets
     @IBOutlet weak var userCredentialsTableView: UITableView!
     @IBOutlet weak var mainStack: UIStackView!
+    @IBOutlet weak var welcomeTitle: UILabel!
+    @IBOutlet weak var welcomeSubtitle: UILabel!
+    @IBOutlet weak var externalLoginSectionTitle: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var guestButton: UIButton!
+    @IBOutlet weak var resetPasswordButton: UIButton!
     
     // MARK: Constraints
     @IBOutlet weak var credentialsTableViewHeight: NSLayoutConstraint!
@@ -36,6 +42,7 @@ class LoginCell: UICollectionViewCell {
         super.awakeFromNib()
         configureUserCredentialsTableView()
         configureButtons()
+        addLocalizedText()
     }
     
     override func layoutSubviews() {
@@ -70,6 +77,12 @@ class LoginCell: UICollectionViewCell {
     
     @IBAction func didTapFacebookButton(_ sender: Any) {
         delegate?.userDidTapFacebookButton()
+    }
+    
+    private func addLocalizedText() {
+        welcomeTitle.text = LocStrings.login_cell_title
+        welcomeSubtitle.text = LocStrings.login_cell_subtitle
+        externalLoginSectionTitle.text = LocStrings.login_cell_external_login_section_title
     }
     
     func configureUserCredentialsTableView() {
@@ -111,8 +124,7 @@ class LoginCell: UICollectionViewCell {
                 userCredentials.0 = cell.userInputTextField.text ?? ""
             case is PasswordTableViewCell:
                 userCredentials.1 = cell.userInputTextField.text ?? ""
-            default:
-                break
+            default: break
             }
         })
         
@@ -125,16 +137,20 @@ class LoginCell: UICollectionViewCell {
     }
     
     private func configureButtons() {
-        loginButton.setTitle("Log in", for: .normal)
+        loginButton.setTitle(LocStrings.login_cell_buttons_login, for: .normal)
+        
+        resetPasswordButton.setTitle(LocStrings.login_cell_buttons_reset, for: .normal)
         
         appleButton.setImage(.init(named: "apple"), for: .normal)
-        appleButton.setTitle("Apple", for: .normal)
+        appleButton.setTitle(LocStrings.login_cell_buttons_apple, for: .normal)
         
         googleButton.setImage(.init(named: "google"), for: .normal)
-        googleButton.setTitle("Google", for: .normal)
+        googleButton.setTitle(LocStrings.login_cell_buttons_google, for: .normal)
         
         facebookButton.setImage(.init(named: "facebook"), for: .normal)
-        facebookButton.setTitle("Facebook", for: .normal)
+        facebookButton.setTitle(LocStrings.login_cell_buttons_facebook, for: .normal)
+        
+        guestButton.setTitle(LocStrings.login_cell_buttons_guest, for: .normal)
     }
 }
 

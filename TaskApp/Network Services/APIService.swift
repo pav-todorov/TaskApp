@@ -8,6 +8,7 @@
 import Foundation
 
 class APIService {
+    // MARK: Variables
     static let shared = APIService()
     
     // MARK: Initializers

@@ -22,15 +22,19 @@ class PasswordTableViewCell: BaseCredentialsTableViewCell {
     
     // MARK: Variables
     static let identifier = "PasswordTableViewCell"
+    private typealias LocStrings = LocalizedStrings.Views.CredentialsCells.PasswordCell
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureInputTitleText(with: "Password")
-        configureInputFieldPlaceholder(with: "Password")
-        configureAssistiveText(with: "Focused")
-        
+        configureTexts()
         configureAccessoryView()
         userInputTextField.isSecureTextEntry = true
+    }
+    
+    private func configureTexts() {
+        configureInputTitleText(with: LocStrings.password_cell_title)
+        configureInputFieldPlaceholder(with: LocStrings.password_cell_placeholder)
+        configureAssistiveText(with: LocStrings.password_cell_assistive_text)
     }
     
     private func configureAccessoryView() {

@@ -8,6 +8,9 @@
 import UIKit
 
 extension UIViewController {
+    // MARK: Variables
+    private typealias LocStrings = LocalizedStrings.Common
+    
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self,
                                          action: #selector(UIViewController.dismissKeyboard))
@@ -24,7 +27,7 @@ extension UIViewController {
                                                 message: message,
                                                 preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: LocStrings.common_ok, style: .default, handler: nil)
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
