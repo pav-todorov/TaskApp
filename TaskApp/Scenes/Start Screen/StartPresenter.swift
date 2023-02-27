@@ -85,6 +85,6 @@ Interactor: StartInteractive
     }
     
     func userDidTapFacebookButton() {
-        
+        interactor.facebookLogin(delegate: view, presenter: self)
     }
 }

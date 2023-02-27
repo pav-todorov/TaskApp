@@ -39,6 +39,8 @@ enum AlertType {
     case systemError(_ error: Error)
     case appleLoginWelcome(givenName: String, email: String)
     case appleLoginMissingEmail
+    case facebookLoginWelcome(givenName: String, email: String)
+    case facebookLoginFailed(error: Error)
     
     var title: String {
         switch self {
@@ -50,6 +52,8 @@ enum AlertType {
         case .systemError(_): return "Something Went Wrong"
         case .appleLoginWelcome(let givenName, _): return "Welcome, \(givenName)"
         case .appleLoginMissingEmail: return "Missing Email Address"
+        case .facebookLoginWelcome(let givenName, _): return "Welcome, \(givenName)"
+        case .facebookLoginFailed: return ""
         }
     }
     
@@ -64,6 +68,8 @@ enum AlertType {
         case .systemError(let error): return error.localizedDescription
         case .appleLoginWelcome(_, let email): return "You've been successfully logged in with your AppleID: \(email)."
         case .appleLoginMissingEmail: return "A valid email address is required to log in."
+        case .facebookLoginWelcome(_, let email): return "You've been successfully logged in with your Facebook account: \(email)."
+        case .facebookLoginFailed(let error): return "\(error.localizedDescription)"
         }
     }
 }

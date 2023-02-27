@@ -7,13 +7,15 @@
 
 import UIKit
 import AuthenticationServices
+import FacebookLogin
+import FacebookCore
 
 // MARK: Start Interactor
 struct StartInteractor: StartInteractive {
     
     // MARK: Start Interactive
     func login(with credentials: (email: String, password: String),
-                               presenter: StartPresentable) {
+               presenter: StartPresentable) {
         
         presenter.showLoadingIndicator()
         Task {
@@ -54,7 +56,36 @@ struct StartInteractor: StartInteractive {
         
     }
     
-    func facebookLogin() {
-        
+    func facebookLogin(delegate: StartViewable, presenter: StartPresentable) {
+        guard let viewController = delegate as? UIViewController else { return }
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: [ .publicProfile,.email ], viewController: viewController) { loginResult in
+            
+            switch loginResult {
+            case .success(_, _, token: let token):
+                
+                if let accessToken = token, !accessToken.isExpired {
+                    let request = FacebookLogin.GraphRequest(graphPath: "me",
+                                                             parameters: ["fields" : "email, name"],
+                                                             tokenString: accessToken.tokenString,
+                                                             version: nil,
+                                                             httpMethod: .get)
+                    request.start(completionHandler: { connection, result, error in
+                        if error != nil {
+                            presenter.showAlertMessage(with: .facebookLoginFailed(error: error!))
+                        } else if let userData = result as? [String : AnyObject] {
+                            guard let givenName = userData["name"] as? String,
+                                  let email = userData["email"] as? String else { return }
+                            
+                            presenter.showAlertMessage(with: .facebookLoginWelcome(givenName: givenName, email: email))
+                        }
+                    })
+                }
+                
+            case .cancelled: break
+            case .failed(let error):
+                presenter.showAlertMessage(with: .facebookLoginFailed(error: error))
+            }
+        }
     }
 }

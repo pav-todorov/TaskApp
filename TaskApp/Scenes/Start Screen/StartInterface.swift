@@ -47,5 +47,5 @@ protocol StartInteractive {
     func login(with credentials: (email: String, password: String), presenter: StartPresentable)
     func appleLogin(delegate: StartViewable)
     func googleLogin()
-    func facebookLogin()
+    func facebookLogin(delegate: StartViewable, presenter: StartPresentable)
 }

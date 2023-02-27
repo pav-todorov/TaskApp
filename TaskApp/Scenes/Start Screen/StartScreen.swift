@@ -35,16 +35,19 @@ class StartScreen: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = StartFactory.default().presenter
-        presenter.view = self
-        
-        presenter.viewDidLoad()
+        injectDependencies()
         configureNavigationCollectionView()
         configurePagesCollectionView()
         setupHorizontalBar()
         self.hideKeyboardWhenTappedAround()
         
         addObservers()
+    }
+    
+    private func injectDependencies() {
+        presenter = StartFactory.default().presenter
+        presenter.view = self
+        presenter.viewDidLoad()
     }
     
     private func addObservers() {
@@ -250,7 +253,7 @@ extension StartScreen: LoginCellProtocol {
     }
     
     func userDidTapFacebookButton() {
-        
+        presenter.userDidTapFacebookButton()
     }
     
     func userDidTapLoginButton(credentials: (email: String, password: String)) {
