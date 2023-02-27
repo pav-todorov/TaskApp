@@ -81,7 +81,7 @@ Interactor: StartInteractive
     }
     
     func userDidTapGoogleButton() {
-        
+        interactor.signInWithGoogle(delegate: view, presenter: self)
     }
     
     func userDidTapFacebookButton() {

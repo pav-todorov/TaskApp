@@ -46,6 +46,6 @@ protocol StartRoutable {}
 protocol StartInteractive {
     func login(with credentials: (email: String, password: String), presenter: StartPresentable)
     func appleLogin(delegate: StartViewable)
-    func googleLogin()
     func facebookLogin(delegate: StartViewable, presenter: StartPresentable)
+    func signInWithGoogle(delegate: StartViewable, presenter: StartPresentable)
 }

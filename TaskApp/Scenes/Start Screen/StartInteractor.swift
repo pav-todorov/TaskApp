@@ -9,6 +9,7 @@ import UIKit
 import AuthenticationServices
 import FacebookLogin
 import FacebookCore
+import GoogleSignIn
 
 // MARK: Start Interactor
 struct StartInteractor: StartInteractive {
@@ -52,10 +53,6 @@ struct StartInteractor: StartInteractive {
         controller.performRequests()
     }
     
-    func googleLogin() {
-        
-    }
-    
     func facebookLogin(delegate: StartViewable, presenter: StartPresentable) {
         guard let viewController = delegate as? UIViewController else { return }
         let loginManager = LoginManager()
@@ -77,7 +74,8 @@ struct StartInteractor: StartInteractive {
                             guard let givenName = userData["name"] as? String,
                                   let email = userData["email"] as? String else { return }
                             
-                            presenter.showAlertMessage(with: .facebookLoginWelcome(givenName: givenName, email: email))
+                            presenter.showAlertMessage(with: .facebookLoginWelcome(givenName: givenName,
+                                                                                   email: email))
                         }
                     })
                 }
@@ -86,6 +84,26 @@ struct StartInteractor: StartInteractive {
             case .failed(let error):
                 presenter.showAlertMessage(with: .facebookLoginFailed(error: error))
             }
+        }
+    }
+    
+    func signInWithGoogle(delegate: StartViewable, presenter: StartPresentable) {
+        guard let viewController = delegate as? UIViewController else { return }
+        
+        GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { signInResult, error in
+            guard error == nil else {
+                presenter.showAlertMessage(with: .googleLoginFailed(error: error!))
+                return
+            }
+            
+            guard let signInResult = signInResult else { return }
+            
+            let user = signInResult.user
+            guard let emailAddress = user.profile?.email,
+                  let givenName = user.profile?.givenName else { return }
+            
+            presenter.showAlertMessage(with: .googleLoginWelcome(givenName: givenName,
+                                                                 email: emailAddress))
         }
     }
 }

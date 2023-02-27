@@ -249,7 +249,7 @@ extension StartScreen: LoginCellProtocol {
     }
     
     func userDidTapGoogleButton() {
-        
+        presenter.userDidTapGoogleButton()
     }
     
     func userDidTapFacebookButton() {

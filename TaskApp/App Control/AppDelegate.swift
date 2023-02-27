@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import FacebookCore
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,12 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         open url: URL,
         options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
-        ApplicationDelegate.shared.application(
+        let facebookCheck = ApplicationDelegate.shared.application(
             app,
             open: url,
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+        
+        let googleHandled: Bool = GIDSignIn.sharedInstance.handle(url)
+          
+        return [facebookCheck, googleHandled].allSatisfy({ $0 })
     }
     
     
